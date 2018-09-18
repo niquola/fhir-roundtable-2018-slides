@@ -74,10 +74,95 @@
 </section>
 
 <section data-markdown><script type="text/template">
-### What is FHIR®?
-----
+
+### Who we are?
 
 </script></section>
+
+<section data-markdown><script type="text/template">
+
+Health Samurai is a **FHIR** company
+       
+</script></section>
+
+<section data-markdown><script type="text/template">
+We are crafting **aidbox** FHIR platform
+</script></section>
+
+<section data-markdown><script type="text/template">
+and help our partners
+
+to build next generation
+
+health care apps
+</script></section>
+
+<section data-markdown><script type="text/template">
+while providing feedback
+
+from buttle fields to FHIR community
+</script></section>
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+### What is Aidbox?
+</script></section>
+
+<section data-markdown><script type="text/template">
+Aidbox is a FHIR development platform
+
+for **FHIR-first** applications
+</script></section>
+
+<section data-markdown><script type="text/template">
+### What is FHIR-first app?
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+Everybody is excited about
+
+innovative new apps
+
+which is possible because of FHIR
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+![](img/Inter.svg)
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+We expect FHIR connectivity from
+most of leading vendors & providers during
+next few years
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+### How to build this innovative apps?
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+You can build it with FHIR
+
+we call it **FHIR-first** 
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+Aidbox is a platform to
+
+create new apps with FHIR
+
+</script></section>
+
 
 <section data-markdown><script type="text/template">
 
@@ -89,97 +174,219 @@ Steve Munini (Helios)
 
 <section data-markdown><script type="text/template">
 
-## Problem #0!
-----
-How to develop Health IT system?
+If we look from this point of view
 
-</script></section>
-
-<section data-markdown><script type="text/template">
-### Health Samurai Story
-![](img/Hx.svg)
-</script></section>
-
-
-<section data-markdown><script type="text/template">
-
-## Problem #0!
-----
-How to do Health IT system?
-
-</script></section>
-
-<section data-markdown><script type="text/template">
-![](img/Inter.svg)
-</script></section>
-
-
-<section data-markdown><script type="text/template">
-
-## Problem #1!
-----
-domain complexity
-
-</script></section>
-
-<section data-markdown><script type="text/template">
-![](img/Domain.svg)
-</script></section>
-
-
-<section data-markdown><script type="text/template">
-
-## Problem #2!
-----
-
-Custom Resources
+priorities are changing
 
 </script></section>
 
 <section data-markdown><script type="text/template">
 
-## Problem #3!
-----
-
-Extensions; FHIR versions;
+We need more extensibility and flexibility
 
 </script></section>
 
+
+
 <section data-markdown><script type="text/template">
 
-## Problem #4!
+## Model Extensibility
+
+---
+
+No **Custom Resources** in FHIR for interop, 
+
+but we need it for apps - no time to wait next release!
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+### Custom Resources
+---
+
+```yml
+resourceType: User
+name: ...
+password: ....
+patient:
+  reference: Patient/pt-1
+
+```
+---
+
+backports
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+## First-Class extensions
 ----
 
-Flexibility for real application;
+```
+Patient.race
+  vs 
+Patient.extensions.where(system='http..../race').value
+```
+
+---
+
+For internal use developers want
+
+extensions as first-class elements
+
 </script></section>
 
 <section data-markdown><script type="text/template">
-![](img/Eco.svg)
-</script></section>
 
+### API Extensibility
+---
+
+Middleware, Custom Operations and hooks to
+put buisness logic code
+
+</script></section>
 
 <section data-markdown><script type="text/template">
 
-## fihrbase
+## Modules & Plugins
 ----
 
+Aidbox can be extended by plugins
+in JVM languages (clojure)
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+## Aidbox Modules
+---
+* chat
+* sms notifications
+* eligibility checks
+* reminders
+* more...
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+## Hooks and subscriptions
+---
+
+Aidbox provides event sourcing log of
+all changes (in kafka by default) and
+you can react on resource updates
+in your service
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+## Custom Operations
+---
+
+You can register custom operations,
+wich will be proxied to you custom service (lambda)
+written with your preffed technology
+
 </script></section>
 
 
 <section data-markdown><script type="text/template">
 
-## Aidbox line!
+## Database access
+
 ----
 
-devbox -> aidbox.one -> aidbox.cloud
+at the heart of aidbox is open-source fhirbase
+
+wich can be accessed from your
+custom operations
 
 </script></section>
 
-
 <section data-markdown><script type="text/template">
-### Thx
+
+## Database access
+
 ----
 
+unlocking power and flexibility of
+SQL and other PostgreSQL features
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+## fhirpath.pg
+----
+
+FHIRPath in your database
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+## Storage & Analytic track
+----
+
+* SQL on FHIR
+* fhirpath in database
+* etc
+
+---
+
+JOIN US
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+## Frontend toolkit
+
+----
+
+* fhir.js
+* fhirpath.js
+* 2way
+* form builder
+* react native
+* sample apps
+* apple healthkit integration
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+## Development pipeline
+----
+
+```
+  devbox (free dev environment)
+   -> aidbox.one (stand alone server)
+   -> aidbox.cloud (hosted by HS in google cloud)
+   -> aidbox.enterprise (any cloud, multitenancy & golden support, co-hosting)
+```
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+### Cut Time to market
+
+---
+
+We invested years of our mental energy
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+### Build your next app
+
+---
+
+## with FHIR and aidbox
 </script></section>
 
 </div></div>
