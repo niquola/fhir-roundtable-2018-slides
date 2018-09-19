@@ -31,7 +31,8 @@
 		</script>
     <style>
      .reveal section img { background: white; }
-     h1,h2,h3 { color: #ea4a35 !important;}
+     h1,h2,h3,em { color: #ea4a35 !important;}
+     strong { color: #357bea !important;}
      img {border: none!important;}
 
      #logo {
@@ -73,35 +74,54 @@
   <img src="img/me.jpeg"/>
 </section>
 
-<section data-markdown><script type="text/template">
+  <section data-markdown><script type="text/template">
 
-### Who we are?
+  ### Who we are?
 
-</script></section>
+  </script></section>
 
-<section data-markdown><script type="text/template">
+<section>
+  <section data-markdown><script type="text/template">
 
-Health Samurai is a **FHIR** company
-       
-</script></section>
+  Health Samurai is a **FHIR** company
 
-<section data-markdown><script type="text/template">
-We are crafting **aidbox** FHIR platform
-</script></section>
+  </script></section>
 
-<section data-markdown><script type="text/template">
-and help our partners
+  <section data-markdown><script type="text/template">
 
-to build next generation
+  ![](img/Hx.svg)
 
-health care apps
-</script></section>
+  </script></section>
 
-<section data-markdown><script type="text/template">
-while providing feedback
+  <section>
+  <p>
+    We are crafting 
+    <br/>
+    <img src="img/aidbox.png" style="height: 42px; display: inline; margin: 0 5px; box-shadow: none;"/>
+    <br/>
+    FHIR platform
+  </p>
+  </section>
 
-from battle fields to FHIR community
-</script></section>
+  <section data-markdown><script type="text/template">
+  and help our partners
+
+  to build next generation
+
+  health care apps
+
+---
+TODO: logos line
+  </script></section>
+
+  <section data-markdown><script type="text/template">
+  providing **feedback** from battle fields
+
+  to FHIR® community
+
+  ![](img/fhirstarter.jpg)
+  </script></section>
+</section>
 
 </script></section>
 
@@ -119,128 +139,165 @@ for **FHIR-first** applications
 ### FHIR-first app?
 </script></section>
 
-<section data-markdown><script type="text/template">
+<section>
 
-Everybody is excited about
+  <section data-markdown><script type="text/template">
 
-innovative new apps
+  Everybody is excited about
 
-which are possible because of FHIR
+  **innovative new apps**
 
-</script></section>
+  unlocked by FHIR
 
-<section data-markdown><script type="text/template">
-![](img/Inter.svg)
-</script></section>
+  ![](img/Inter.svg)
 
-<section data-markdown><script type="text/template">
-
-We expect FHIR connectivity
-
-from leaders of industry
-
-in next few years
-
-</script></section>
-
-<section data-markdown><script type="text/template">
-
-### How to build this innovative apps?
-
-</script></section>
-
-<section data-markdown><script type="text/template">
-
-You can build it with FHIR
-
-we call it **FHIR-first** 
-
-</script></section>
-
-<section data-markdown><script type="text/template">
-
-Aidbox is a platform to
-
-create new apps with FHIR
-
-</script></section>
+  </script></section>
 
 
-<section data-markdown><script type="text/template">
+  <section data-markdown><script type="text/template">
 
-> FHIR, fundamentally is a platform specification 
+  We expect **FHIR connectivity**
 
-Steve Munini (Helios)
+  from leaders of industry
 
-</script></section>
-
-<section data-markdown><script type="text/template">
-
-If we look from this point of view
-
-priorities are changing
-
-</script></section>
-
-<section data-markdown><script type="text/template">
-
-We need more extensibility and flexibility
-
-</script></section>
-
-
-
-<section data-markdown><script type="text/template">
-
-## Model Extensibility
+  in next few years
 
 ---
+  TODO: apple, google, epic, cerner logos
 
-No **Custom Resources** in FHIR for interop, 
 
-but we need it for apps - no time to wait next release!
-
-</script></section>
-
+  </script></section>
+</section>
 
 <section data-markdown><script type="text/template">
 
-### Custom Resources
----
-
-```yml
-resourceType: User
-name: ...
-password: ....
-patient:
-  reference: Patient/pt-1
-
-```
----
-
-backports
+### How to craft this apps?
 
 </script></section>
 
+<section>
+  <section data-markdown><script type="text/template">
 
-<section data-markdown><script type="text/template">
+  Design healthcare systems
 
-## First-Class extensions
-----
+  is always **challenge**
 
-```
-Patient.race
-  vs 
-Patient.extensions.where(system='http..../race').value
-```
+  </script></section>
 
----
+  <section data-markdown><script type="text/template">
+   ### What is FHIR?
+  </script></section>
 
-For internal use developers want
+  <section data-markdown><script type="text/template">
 
-extensions as first-class elements
+  > FHIR, fundamentally is a platform specification 
 
-</script></section>
+  Steve Munini (Helios)
+
+  </script></section>
+
+  <section data-markdown><script type="text/template">
+
+  You can build apps with FHIR
+
+  we call it **FHIR-first** 
+
+  </script></section>
+
+  <section data-markdown><script type="text/template">
+
+  Aidbox is a platform to
+
+  create **FHIR-first** apps
+
+  </script></section>
+</section>
+
+
+
+<section>
+  <section data-markdown><script type="text/template">
+
+  While build with FHIR in the heart
+
+  **priorities are changing**!
+
+  </script></section>
+
+  <section data-markdown><script type="text/template">
+
+  We need more extensibility and flexibility
+
+  because app should work
+
+  </script></section>
+</section>
+
+
+<section>
+  <section data-markdown><script type="text/template">
+
+  ### Info Model Extensibility
+
+  </script></section>
+
+  <section data-markdown><script type="text/template">
+  **Custom Resources** are forbiden in FHIR
+  </script></section>
+
+
+  <section data-markdown><script type="text/template">
+  but we need it for apps
+
+  no time to wait next release!
+  </script></section>
+
+
+  <section data-markdown><script type="text/template">
+
+  ### Custom Resources
+  ---
+
+  ```js
+  // GET /User?_include=patient
+
+  {
+    resourceType: "User",
+    name: "niquola",
+    password: "5baa61e4c9b9......" ,
+    roles: ["admin"], 
+    patient: {
+      reference: "Patient/pt-1"
+    }
+  }
+
+  ```
+  ---
+
+  backports
+
+  </script></section>
+
+
+  <section data-markdown><script type="text/template">
+
+  ## First-Class extensions
+  ----
+
+  ```
+  Patient.race
+    vs 
+  Patient.extensions.where(system='http..../race').value
+  ```
+
+  ---
+
+  For internal use developers want
+
+  extensions as first-class elements
+
+  </script></section>
+</section>
 
 <section data-markdown><script type="text/template">
 
@@ -266,10 +323,10 @@ in JVM languages (clojure)
 
 ## Aidbox Modules
 ---
-* chat
-* sms notifications
-* eligibility checks
-* reminders
+* chat (Narus Health, TealNet)
+* sms notifications (CleoEHR)
+* eligibility checks (CleoEHR)
+* reminders (CleoEHR, Navimize)
 * more...
 
 </script></section>
@@ -298,7 +355,7 @@ written with your preffed technology
 
 <section data-markdown><script type="text/template">
 
-## Database access
+### Database access
 
 ----
 
@@ -311,7 +368,7 @@ custom operations
 
 <section data-markdown><script type="text/template">
 
-## Database access
+### Database access
 
 ----
 
@@ -322,7 +379,7 @@ SQL and other PostgreSQL features
 
 <section data-markdown><script type="text/template">
 
-## Analyze your data
+### Mine your data
 
 ----
 
@@ -333,7 +390,7 @@ SQL and other PostgreSQL features
 
 <section data-markdown><script type="text/template">
 
-## fhirpath.pg
+### fhirpath.pg
 ----
 
 FHIRPath in your database
